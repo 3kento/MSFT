@@ -22,4 +22,4 @@ jobs:
       - name: Run script
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-        run: python your_script.py
+        run: python MSFT.py
