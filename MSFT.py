@@ -62,7 +62,7 @@ def changeMessage(n = 3):
     elif n == 1:
         message = "Using the second formula, the current price has reached beneath Y = " + str(Y) + ", at: " + str(currentPrice)
     elif n == 2:
-        message = "Using the third formula, the current price has reached beneath X = " + str(Z) + ", at: " + str(currentPrice) + ", the highest point today was " + highday
+        message = "Using the third formula, the current price has reached beneath Z = " + str(Z) + ", at: " + str(currentPrice) + ", the highest point today was " + highday
     else:
         return None
     
@@ -76,6 +76,6 @@ def changeMessage(n = 3):
     else:
         print("Failed to send message:", response.text)
 
-
 main()
 
+changeMessage(2)
