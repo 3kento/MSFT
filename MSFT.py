@@ -39,7 +39,7 @@ def main():
     global Y
     global Z
 
-    if currentPrice >= X:
+    if currentPrice <= X:
         changeMessage(0)
 
     elif currentPrice <= Y:
@@ -78,3 +78,4 @@ def changeMessage(n = 3):
 
 
 main()
+
