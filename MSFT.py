@@ -31,7 +31,7 @@ X = (Ha - (Ha - Lab) * 0.75).iloc[0]
 Y = Ha - (2 * (Ha - ((Ha + Hb + Hc)/3)))
 
 #0.766 percent rule
-Z = (currentPrice - (highday * 0.00766)).iloc[0]
+Z = (highday - (highday * 0.00766)).iloc[0]
 
 def main():
     global currentPrice
@@ -62,7 +62,7 @@ def changeMessage(n = 3):
     elif n == 1:
         message = "Using the second formula, the current price has reached beneath Y = " + str(Y) + ", at: " + str(currentPrice)
     elif n == 2:
-        message = "Using the third formula, the current price has reached beneath Z = " + str(Z) + ", at: " + str(currentPrice) + ", the highest point today was " + highday
+        message = "Using the third formula, the current price has reached beneath Z = " + str(Z) + ", at: " + str(currentPrice)
     else:
         return None
     
@@ -78,4 +78,3 @@ def changeMessage(n = 3):
 
 main()
 
-changeMessage(2)
