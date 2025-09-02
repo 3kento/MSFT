@@ -1,29 +1,29 @@
-name: Run Python script every 60 minutes
+# name: Run Python script every 60 minutes
 
-on:
-  push:
-      branches:
-        - main   # or your default branch
+# on:
+#   push:
+#       branches:
+#         - main   # or your default branch
         
-  schedule:
-    - cron: '*/60 * * * *'  # runs every 60 minutes
+#   schedule:
+#     - cron: '*/60 * * * *'  # runs every 60 minutes
 
-jobs:
-  run-script:
-    runs-on: ubuntu-latest
+# jobs:
+#   run-script:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v3
+#     steps:
+#       - uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
+#       - name: Set up Python
+#         uses: actions/setup-python@v4
+#         with:
+#           python-version: '3.10'
 
-      - name: Install dependencies
-        run: pip install yfinance python-telegram-bot
+#       - name: Install dependencies
+#         run: pip install yfinance python-telegram-bot
 
-      - name: Run script
-        env:
-          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-        run: python MSFT.py
+#       - name: Run script
+#         env:
+#           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+#         run: python MSFT.py
